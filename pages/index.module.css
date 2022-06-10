@@ -1,0 +1,33 @@
+.index {
+    width: 80vw;
+    margin: 0 10vw 0 10vw;
+}
+
+.title {
+    margin: 0.5em 0 0 0;
+    text-align: center;
+}
+
+.button {
+    margin: 1em 35vw 2em 35vw;
+    width: 10vw;
+
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.text {
+    margin: 0.5em 0 0 0;
+    text-align: center;
+}
+
+.button:hover{
+    cursor: pointer;
+}
