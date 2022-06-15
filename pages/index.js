@@ -1,6 +1,4 @@
 import styles from "./index.module.css"
-import Header from "../components/Header";
-import Link from "next/link";
 import {useEffect, useState} from "react";
 import {getHumidity, getPressure, getTemperature} from "../lib/api";
 
@@ -72,15 +70,15 @@ export default function IndexPage() {
             <h1 className={styles.title}>Data</h1>
 
             <h2 className={styles.title}>Temperature</h2>
-            <p className={styles.text}>{temp["temperature"]}°C</p>
+            <p className={styles.text}>{temp}°C</p>
             <button className={styles.button} onClick={loadNewTemperature}>Reload!</button>
 
             <h2 className={styles.title}>Humidity</h2>
-            <p className={styles.text}>{humidity["humidity"]}%</p>
+            <p className={styles.text}>{humidity}%</p>
             <button className={styles.button} onClick={loadNewHumidity}>Reload!</button>
 
             <h2 className={styles.title}>Pressure</h2>
-            <p className={styles.text}>{pressure["pressure"]} Pa</p>
+            <p className={styles.text}>{pressure} Pa</p>
             <button className={styles.button} onClick={loadNewPressure}>Reload!</button>
         </div>
     )
