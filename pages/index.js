@@ -6,9 +6,9 @@ import {getHumidity, getPressure, getTemperature} from "../lib/api";
 
 export default function IndexPage() {
 
-    const [temp, setTemp] = useState()
-    const [humidity, setHumidity] = useState()
-    const [pressure, setPressure] = useState()
+    const [temp, setTemp] = useState(0)
+    const [humidity, setHumidity] = useState(0)
+    const [pressure, setPressure] = useState(0)
 
     useEffect(() => {
         const loadTemperature = async () => {
@@ -67,20 +67,20 @@ export default function IndexPage() {
         }
     }
 
-    return temp && (
+    return (
         <div className={styles.index}>
             <h1 className={styles.title}>Data</h1>
 
             <h2 className={styles.title}>Temperature</h2>
-            <p className={styles.text}>{temp.name}°C</p>
+            <p className={styles.text}>{temp["temperature"]}°C</p>
             <button className={styles.button} onClick={loadNewTemperature}>Reload!</button>
 
             <h2 className={styles.title}>Humidity</h2>
-            <p className={styles.text}>{humidity.name}%</p>
+            <p className={styles.text}>{humidity["humidity"]}%</p>
             <button className={styles.button} onClick={loadNewHumidity}>Reload!</button>
 
             <h2 className={styles.title}>Pressure</h2>
-            <p className={styles.text}>{pressure.name}Pa</p>
+            <p className={styles.text}>{pressure["pressure"]} Pa</p>
             <button className={styles.button} onClick={loadNewPressure}>Reload!</button>
         </div>
     )
